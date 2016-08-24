@@ -1,0 +1,39 @@
+application: go-poly-tenant
+module: default
+version: alpha
+runtime: go
+api_version: go1
+threadsafe: true
+
+default_expiration: "1m"
+instance_class: F1
+
+inbound_services:
+- warmup
+
+handlers:
+- url: /bower_components
+  static_dir: static/bower_components
+  secure: always
+
+- url: /images
+  static_dir: static/images
+  secure: always
+
+- url: /src
+  static_dir: static/src
+  secure: always
+
+- url: /service-worker.js
+  static_files: static/service-worker.js
+  upload: static/service-worker.js
+  secure: always
+
+- url: /_ah/warmup
+  script: _go_app
+  secure: always
+  login: admin
+
+- url: /.*
+  script: _go_app
+  secure: always
