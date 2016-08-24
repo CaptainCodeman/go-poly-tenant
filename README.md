@@ -43,7 +43,7 @@ The `/app` folder contains the AppEngine application and also serves the polymer
 frontend SPA from a static folder which uses a symlink to point to the regular
 Polymer-CLI build folder. Create it in the `/app` folder using:
 
-  $ ln -s ../build/unbundled static
+    $ ln -s ../build/unbundled static
 
 ## Run Locally
 
