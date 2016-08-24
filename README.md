@@ -6,9 +6,11 @@ custom domain or using a CNAME from a root service (e.g. tenant.service.com).
 
 Examples:
 
-https://red-dot-go-poly-tenant.appspot.com/
-https://green-dot-go-poly-tenant.appspot.com/
-https://blue-dot-go-poly-tenant.appspot.com/
+* https://red-dot-go-poly-tenant.appspot.com/
+* https://green-dot-go-poly-tenant.appspot.com/
+* https://blue-dot-go-poly-tenant.appspot.com/
+
+The dummy tenants are generated via the `/app/warmup.go` file.
 
 Yes, those are some funky URLs, the '-dot-' part is todo with how AppEngine
 provides HTTPS for appspot.com domains. In reality you'd use a custom domain
@@ -53,9 +55,9 @@ Start the app locally by running `goapp serve` within the `/app` folder
 
 Go to one of the tenant sites:
 
-http://red.127.0.0.1.xip.io:8080/
-http://green.127.0.0.1.xip.io:8080/
-http://blue.127.0.0.1.xip.io:8080/
+* http://red.127.0.0.1.xip.io:8080/
+* http://green.127.0.0.1.xip.io:8080/
+* http://blue.127.0.0.1.xip.io:8080/
 
 xip.io is a wildcard DNS service that can be used when developing locally.
 
