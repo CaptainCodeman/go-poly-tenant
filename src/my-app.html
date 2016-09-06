@@ -128,8 +128,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       ],
 
       ready: function() {
-        this.customStyle['--app-primary-color'] = MyApp.tenant.theme_color;
-        this.updateStyles();
+        this.updateStyles({'--app-primary-color': MyApp.tenant.theme_color});
       },
 
       _routePageChanged: function(page) {
